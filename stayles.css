@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://fondosmil.co/fondo/3552.jpg');
+}
+
+header {
+    background-image: url("https://img.freepik.com/fotos-premium/diseno-material-textura-carbono-negro-abstracto-cinta-advertencia_97770-46.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#gameList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.gameCard {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; 
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    width: 300px;
+}
+
+.gameCardInner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.gameCard:hover .gameCardInner {
+    transform: rotateY(180deg); 
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; 
+}
+
+.front {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.back {
+    transform: rotateY(180deg);
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gameImage {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    margin-bottom: 10px;
+}
+
+
+h1 {
+    font-family: 'Gaegu', sans-serif;
+    font-family: 'Honk', system-ui;
+    font-size: 60px; 
+}
+
+h2, p{
+    font-family: 'Single Day', cursive;
+}
+
